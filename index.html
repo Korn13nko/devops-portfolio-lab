@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Korni | Junior DevOps Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --green: #4ade80;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'JetBrains Mono', monospace; }
+    body { background-color: var(--bg); color: var(--text); padding: 40px 20px; display: flex; justify-content: center; }
+    .container { max-width: 850px; width: 100%; display: flex; flex-direction: column; gap: 24px; }
+    
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 28px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
+    .header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+    .name { font-size: 1.8rem; font-weight: 700; color: var(--text); }
+    .title { color: var(--accent); font-size: 1.1rem; margin-top: 4px; }
+    .status-badge { background: rgba(74, 222, 128, 0.1); color: var(--green); border: 1px solid var(--green); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; }
+    
+    h2 { font-size: 1.2rem; color: var(--accent); margin-bottom: 16px; border-left: 3px solid var(--accent); padding-left: 10px; }
+    p { color: var(--text-muted); line-height: 1.6; font-size: 0.95rem; }
+    
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag { background: #0f172a; border: 1px solid var(--border); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; color: var(--text); }
+    .skill-tag.active { border-color: var(--accent); color: var(--accent); }
+    
+    .timeline-item { margin-bottom: 16px; border-left: 2px solid var(--border); padding-left: 16px; position: relative; }
+    .timeline-item::before { content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; position: absolute; left: -5px; top: 6px; }
+    .timeline-title { font-weight: 600; color: var(--text); }
+    .timeline-sub { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
+    
+    .footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Шапка резюме -->
+    <div class="card header">
+      <div>
+        <div class="name">Korni</div>
+        <div class="title">&gt; Helpdesk Specialist -> Aspiring DevOps Engineer</div>
+      </div>
+      <div class="status-badge">● Container: Active (Nginx:Alpine)</div>
+    </div>
+
+    <!-- Про мене -->
+    <div class="card">
+      <h2>// Про мене</h2>
+      <p>
+        Спеціаліст технічної підтримки з практичним досвідом вирішення нестандартних проблем у динамічному середовищі. Переходжу в DevOps, автоматизуючи рутину та створюючи надійну інфраструктуру. Орієнтований на швидкий відчутний результат, упевнено дебажу помилки та не боюся брати відповідальність за інфраструктурні рішення.
+      </p>
+    </div>
+
+    <!-- Навички -->
+    <div class="card">
+      <h2>// Стек технологій</h2>
+      <div class="skills-grid">
+        <span class="skill-tag active">Linux (Ubuntu Server CLI)</span>
+        <span class="skill-tag active">Docker & Dockerfile</span>
+        <span class="skill-tag active">SSH & Мережевий стек</span>
+        <span class="skill-tag active">Nginx Reverse Proxy</span>
+        <span class="skill-tag">Bash / Shell Scripting</span>
+        <span class="skill-tag">Git & GitHub</span>
+        <span class="skill-tag">CI/CD (В процесі)</span>
+        <span class="skill-tag">Troubleshooting & Logs Analysis</span>
+      </div>
+    </div>
+
+    <!-- Досвід і проєкти -->
+    <div class="card">
+      <h2>// Досвід та практичні кейси</h2>
+      
+      <div class="timeline-item">
+        <div class="timeline-title">Self-Hosted DevOps Lab (Цей сервер)</div>
+        <div class="timeline-sub">Вересень 2026 | Одиничний проєкт</div>
+        <p>Розгорнув чистий Ubuntu Server без GUI, налаштував віддалений доступ через SSH-ключі та зібрав власний ізольований образ у Docker на базі Alpine Linux із мапінгом портів.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-title">Helpdesk Specialist</div>
+        <div class="timeline-sub">Будівельна компанія | Теперішній час</div>
+        <p>Адміністрування робочих станцій, підтримка мережевої інфраструктури, діагностика збоїв і комунікація з користувачами в умовах високих робочих темпів.</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      Розгорнуто в контейнері за допомогою Docker | 2026
+    </div>
+
+  </div>
+</body>
+</html>
